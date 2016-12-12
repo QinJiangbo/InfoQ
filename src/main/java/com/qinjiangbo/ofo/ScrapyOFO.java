@@ -14,7 +14,10 @@ import java.util.Set;
  */
 public class ScrapyOFO {
 
-    public Map<Integer, Integer> request() throws IOException {
+    /**
+     * 处理请求，从服务器上获取数据
+     */
+    public void request() throws IOException {
         // 特征点数据
         Map<Integer, Address> database = DataBase.getData();
         // 建立POST请求，循环获取各个点当前时间的小黄车数量
@@ -44,7 +47,6 @@ public class ScrapyOFO {
             }
         }
 
-        return null;
     }
 
     /**
