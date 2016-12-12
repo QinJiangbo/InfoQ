@@ -1,4 +1,4 @@
-package com.qinjiangbo;
+package com.qinjiangbo.engine;
 
 import com.qinjiangbo.engine.Downloader;
 import com.qinjiangbo.engine.LinkParser;
