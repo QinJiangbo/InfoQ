@@ -47,9 +47,14 @@ public class ScrapyOFO {
         return null;
     }
 
+    /**
+     * 创建请求
+     *
+     * @param url  请求地址
+     * @param body 请求数据
+     * @return
+     */
     private Request buildRequest(String url, RequestBody body) {
-//        MediaType TEXT = MediaType.parse("text/plain;charset=utf-8");
-//        RequestBody requestBody = RequestBody.create(TEXT, text);
         Request request = new Request.Builder()
                 .url(url)
                 .post(body)
