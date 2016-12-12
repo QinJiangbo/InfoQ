@@ -1,5 +1,9 @@
 package com.qinjiangbo;
 
+import com.qinjiangbo.engine.Downloader;
+import com.qinjiangbo.engine.LinkParser;
+import com.qinjiangbo.engine.TitleUrlPair;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
