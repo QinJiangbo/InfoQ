@@ -17,11 +17,11 @@ public class OFOStart {
     public OFOStart() {
         timer = new Timer();
         System.out.println("定时任务开始了...");
-        timer.scheduleAtFixedRate(new ReqeatTask(), 0, 30 * 60 * 1000);
+        timer.scheduleAtFixedRate(new RepeatTask(), 0, 30 * 60 * 1000);
         scrapyOFO = new ScrapyOFO();
     }
 
-    class ReqeatTask extends TimerTask {
+    class RepeatTask extends TimerTask {
 
         @Override
         public void run() {
