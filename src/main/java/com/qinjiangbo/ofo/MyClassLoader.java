@@ -52,13 +52,7 @@ public class MyClassLoader extends URLClassLoader {
         System.out.println("3* " + clazz3.getClassLoader());
         System.out.println("4* " + clazz4.getClassLoader());
 
-        List<Object> objects = new ArrayList<>();
-        int i = 0;
-        while (true) {
-            TimeUnit.SECONDS.sleep(1);
-            Object o = new Object();
-            objects.add(o);
-            System.out.println("adding object " + ++i);
-        }
+        System.out.println(Runtime.getRuntime().availableProcessors());
+
     }
 }
