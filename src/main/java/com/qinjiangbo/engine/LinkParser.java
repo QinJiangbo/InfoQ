@@ -22,7 +22,7 @@ public class LinkParser {
         linkQueue = new LinkedList<>();
         try {
             Document document = Jsoup.connect(url).get();
-            Elements elements = document.select(".download");
+            Elements elements = document.select(".introduction-wrapper");
             for (Element element : elements) {
                 Element ele0 = element.select("a").get(0);
                 Element ele1 = element.select("a").get(1);

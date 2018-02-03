@@ -10,7 +10,7 @@ import java.net.URL;
  */
 public class Downloader extends Thread {
 
-    private String saveLocation = "/Users/Richard/Downloads/InfoQ-ArchSummit/";
+    private String saveLocation = "/Users/richard/Downloads/InfoQ-ArchSummit/";
     private TitleUrlPair titleUrlPair;
 
     public Downloader(TitleUrlPair titleUrlPair, String saveLocation) {

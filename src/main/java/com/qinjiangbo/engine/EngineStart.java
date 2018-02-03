@@ -12,25 +12,27 @@ public class EngineStart {
 
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
-        Queue<TitleUrlPair> titleUrlPairs = LinkParser.extractLinks("http://ppt.geekbang.org/qconsh2016");
+        Queue<TitleUrlPair> titleUrlPairs = LinkParser.extractLinks("http://ppt.geekbang.org/qconsh2017");
         List<Thread> list = new LinkedList<>();
 
         for (TitleUrlPair titleUrlPair: titleUrlPairs) {
-            Thread thread = new Downloader(titleUrlPair, "Sh2016");
+            Thread thread = new Downloader(titleUrlPair, "Shanghai2017");
             list.add(thread);
             thread.start();
         }
 
-        titleUrlPairs = LinkParser.extractLinks("http://ppt.geekbang.org/as");
+        titleUrlPairs = LinkParser.extractLinks("http://ppt.geekbang.org/assz2017");
         for (TitleUrlPair titleUrlPair: titleUrlPairs) {
-            Thread thread = new Downloader(titleUrlPair, "Shenzhen2016");
+            Thread thread = new Downloader(titleUrlPair, "Shenzhen2017");
             list.add(thread);
             thread.start();
         }
 
         // 等待所有线程完成
         for (Thread thread : list) {
-            while (thread.isAlive());
+            while (thread.isAlive()){
+
+            };
         }
         long end = System.currentTimeMillis();
         System.out.println("下载完毕！耗时: " + (end - start)/60000 + "分钟");
